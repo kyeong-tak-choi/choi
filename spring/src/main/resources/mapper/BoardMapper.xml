@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- logging.config=classpath:logback-spring.xml
+
+spring.datasource.type=org.apache.tomcat.jdbc.pool.DataSource
+# harang33
+spring.datasource.url=jdbc:mysql://localhost:3306/데이터베이스명autoReconnect=true&useSSL=false&useUnicode=yes&characterEncoding=UTF-8&autoReconnectForPools=true&serverTimezone=UTC
+spring.datasource.username=아이디
+spring.datasource.password=패스워드
+
+spring.mvc.view.prefix=/WEB-INF/views/
+spring.mvc.view.suffix=.jsp
+
+spring.http.multipart.maxFileSize=10MB
+spring.http.multipart.maxRequestSize=10MB -->
+
+<mapper namespace="com.web.mapper.BoardMapper">
+    <select id="getBoard" resultType="com.web.domain.Board">
+        SELECT
+        idx, title, image, contents
+        FROM
+        tb_board
+        ORDER BY idx asc
+    </select>
+</mapper>
